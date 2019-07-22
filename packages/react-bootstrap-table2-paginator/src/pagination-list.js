@@ -15,7 +15,7 @@ const PaginatonList = props => (
         }
         return (
           <PageButton
-            key={ pageProps.page }
+            key={ typeof pageProps.page === 'object' ? pageProps.title.replace(' ', '') : pageProps.page }
             { ...pageProps }
             onPageChange={ props.onPageChange }
           />
